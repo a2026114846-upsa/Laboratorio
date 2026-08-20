@@ -1,0 +1,19 @@
+Algoritmo PrepararUnCafe
+	Definir taza1, CafePreparado1 Como Cadena
+	Definir azucar1 Como Real
+	Definir salida Como Cadena
+	// ENTRADA
+	Escribir 'Ingrese el tipo/estado de la taza (ej. taza limpia)'
+	Leer taza1
+	Escribir "Ingrese el estado del café (ej. Café caliente de cafetera)"
+	Leer CafePreparado1
+	Escribir 'Ingrese la cantidad/tipo de azucar (ej. 2 cucharadas"
+	Leer azucar1
+	// PROCESO
+	Escribir 'Paso 1: Colocar', taza1, 'en la superficie de trabajo'
+	Escribir 'Paso 2:Servir el', CafePreparado1, 'dentro de la', taza1, '.'
+	Escribir 'Paso 3: Agregar', azucar1, 'a la', taza1, '.'
+	Escribir 'Paso 4: Mezclar el contenido con una cuchara'
+	// SALIDA
+	Escribir 'SALIDA:', salida
+FinAlgoritmo
