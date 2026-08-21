@@ -1,0 +1,23 @@
+Algoritmo LlegarALaUniversidad
+	Definir ubicacion1 Como Cadena
+	Definir universidad1 Como Cadena
+	Definir mediodetransporte Como Cadena
+	Definir salida Como Cadena
+	
+	//ENTRADA
+	Escribir "Ingrese la ubicacion en la que se encuentra"
+	Leer ubicacion1
+	Escribir "Ingrese la universidad de destino"
+	Leer universidad1
+	Escribir "Ingrese su medio de transporte elegido, ej (auto particular, micro, taxi)"
+	Leer mediodetransporte
+	
+	//PROCESO 
+	Escribir "Paso 1: Salir de"  ,ubicacion1
+	Escribir "Paso 2: Encontrar el"  ,mediodetransporte
+	Escribir "Paso 3: Llegar a la" ,universidad1
+	Escribir "Paso 4: Ingresar y buscar el aula!!"
+	
+	//SALIDA 
+	Escribir "SALIDA", salida
+FinAlgoritmo
