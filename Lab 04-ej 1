@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main ()
+{
+      double a, b;
+      string name;
+      cout << "Introduce tu nombre";
+      cin >> name;
+      cout << "Introduce tu consumo de agua"
+      cin >> a;
+            if (0 < a && a<=15) {
+                b = 10 + (a * 1.20);
+             cout << "Tu consumo es de" <<b<< "Tu consumo es minimo" << endl;
+             }
+             if (15 < a && a<= 35){
+                    b = 10 + (a*2.50);
+             cout << "Tu consumo es de" <<b<< "Tu consumo es doméstico" << endl;
+             }
+             if (35 < a && a<= 70) {
+                    b = 10 + (a * 4.00);
+             cout << "Tu consumo es de" <<b<< "Tu consumo es comercial" << endl;
+             }
+             if ( a > 70) {
+                    b = 10 + (a * 6.50);
+             cout << "Tu consumo es de" <<b<< "Tu consumo es Alto/Industrial" << endl;
+            }
+            cout << "Nombre:" << name << endl;
+            cout << "Monto fijo: 10 bs" << endl;
+            cout << "Total a pagar:" <<b<< "Bs." << endl;
+            
