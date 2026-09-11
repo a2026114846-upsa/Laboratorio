@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+            //Declaracion de variables
+            char opcion;
+            int peso;
+            double tarifaBase;
+            double preciokgextra;
+            int kgextras;
+            double montoTotal;
+            do {
+                //Mostrar menú interactivo
+                cout << "Control tarifa envíos" << endl;
+                cout << "[L] La Paz/ El Alto"<< endl;
+                cout << "[C] Cochabamba"<< endl;
+                cout << "[S] Santa Cruz"<< endl;
+                cout << "[X] Salir del sistema"<< endl;
+
+
+                cout << "Seleccione una opción";
+                cin >> opcion;
+
+                //Control de flujo con switch (Mayusculas y minusculas)
+                switch (opcion) {
+                                 case 'L':
+                                 case 'l':
+                                 tarifaBase = 7.00;
+                                 preciokgextra = 3.00;
+
+                                 cout << "La Paz/El Alto"<< endl;
+                                 cout << "Ingrese el peso de su objeto a enviar:" << endl;
+                                 cin >> peso;
+
+                                if (peso <=0) {
+                                        cout << "El peso debe ser mayor a 0"<< endl;
+                                }
+                                else if (peso <2) {
+                                        montoTotal = tarifaBase;
+                                        cout << "El monto a pagar es: Bs." << montoTotal << endl;
+                                }
+                                else {
+                                kgextras = peso - 2;
+                                montoTotal = tarifaBase + (kgextras * preciokgextra);
+                                cout << "El monto a pagar es: Bs." << montoTotal << endl;
+                                }
+                                break;
+
+                                case 'C':
+                                case 'c':
+                                tarifaBase = 5.00;
+                                preciokgextra = 2.00;
+
+                                cout << "Cochabamba" << endl;
+                                cout << "Ingrese el peso de su objeto a enviar:" << endl;
+                                 cin >> peso;
+                                 if (peso <=0) {
+                                    cout << "El peso debe ser mayor a 0"<< endl;
+                                 }
+                                 else if (peso <2) {
+                                    montoTotal = tarifaBase;
+                                    cout << "El monto a pagar es: Bs." << montoTotal << endl;
+                                 }
+                                else {
+                                    kgextras = peso - 2;
+                                    montoTotal = tarifaBase + (kgextras * preciokgextra);
+                                    cout << "El monto a pagar es: Bs." << montoTotal << endl;
+                                }
+                                break;
+
+                                case 'S':
+                                case 's':
+                                tarifaBase = 8.00;
+                                preciokgextra = 4.00;
+
+                                cout << "Santa Cruz" << endl;
+                                cout << "Ingrese el peso de su objeto a enviar:" << endl;
+                                cin >> peso;
+                                if (peso <=0) {
+                                    cout << "El peso debe ser mayor a 0" << endl;
+                                }
+                                else if (peso <2){
+                                    montoTotal= tarifaBase;
+                                    cout << "El monto a pagar es: Bs."<<montoTotal << endl;
+                                }
+                                else {
+                                    kgextras = peso - 2;
+                                    montoTotal = tarifaBase + (kgextras *preciokgextra);
+                                    cout << "El monto a pagar es de: Bs."<< montoTotal << endl;
+                                }
+                                break;
+
+                                case 'X':
+                                case 'x':
+                                cout << "Salió del programa. Hasta pronto!" << endl;
+                                break;
+
+                                default:
+                                    cout << "Opción no valida, vuelva a intentarlo" << endl;
+                                    break;
+                }
+                } while (opcion != 'X' && opcion  != 'x');
+                return 0;
+}
+
+
+
+
