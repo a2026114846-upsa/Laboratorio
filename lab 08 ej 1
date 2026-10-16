@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int leerEvaluaciones ();
+double leerNota ();
+double calcularPromedio (int evaluaciones);
+int clasificarEstudiante (double promedio);
+void mostrarResultado (double promedio, int clasificacion);
+
+int main () { 
+int evaluaciones, clasificacion;
+double promedio;
+evaluaciones = leerEvaluaciones ();
+promedio = calcularPromedio (evaluaciones;
+clasificacion= clasificarEstudiante (promedio);
+mostrarResultado (promedio, clasificacion);
+}
+
+int leerEvaluaciones (){
+int evaluaciones;
+do {
+        cout << "Ingrese la cantidad de evaluaciones"<< endl;
+        cin >> evaluaciones;
+        } while (evaluaciones <=0)
+        return evaluaciones;
+        }
+double leerNota (){ 
+    int nota;
+    do { 
+            cout << "Ingrese la nota"<< endl;
+            cin >> nota;
+            } while (nota <0)
+            return nota;
+            }
+double calcularPromedio (int evaluaciones) {
+    int nota, suma = 0;
+    for (int i=1; i<=evaluaciones; i++){
+        cout << "Evaluaciones" << i << endl;
+    nota = leerNota ();
