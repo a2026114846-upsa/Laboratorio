@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+void leerNumero(int &N);
+void descomponerNumero(int N, int &u, int &d, int &c, int &m);
+void mostrarDigitos(int u, int d, int c, int m);
+
+int main()
+{
+    int N, u, d, c, m;
+
+    leerNumero(N);
+    descomponerNumero(N, u, d, c, m);
+    mostrarDigitos(u, d, c, m);
+
+    return 0;
+}
+
+void leerNumero(int &N)
+{
+    do
+    {
+        cout << "Ingrese un numero: ";
+        if (!(cin >> N))
+        {
+            cout << "Dato incorrecto" << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            N = 0;
+        }
+        else if (N < 1 || N >= 10000)
+        {
+            cout << "Ingrese un numero entre 1 y 9999" << endl;
+        }
+
+    } while (N < 1 || N >= 10000);
+}
+
+void descomponerNumero(int N, int &u, int &d, int &c, int &m)
+{
+    u = N % 10;
+    d = (N / 10) % 10;
+    c = (N / 100) % 10;
+    m = (N / 1000) % 10;
+}
+
+void mostrarDigitos(int u, int d, int c, int m)
+{
+    cout << "Unidades: " << u << endl;
+    cout << "Decenas: " << d << endl;
+    cout << "Centenas: " << c << endl;
+    cout << "Unidades de mil: " << m << endl;
+}
